@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rita Printing & Advertising</title>
+<title>Rich Printing & Advertising</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -678,30 +678,205 @@ body{
 .cta-banner .btn-primary:hover{box-shadow:0 18px 40px rgba(255,255,255,0.25);}
 .cta-banner .hero-cta{justify-content:center;}
 
-/* ─── FOOTER ─── */
-.footer{
-  padding:clamp(28px,5vh,44px) clamp(20px,5vw,48px);
-  border-top:1px solid var(--border);
+/* ─── FULL FOOTER ─── */
+.site-footer{
+  position:relative;
+  margin:clamp(20px,4vh,36px) clamp(16px,4vw,40px) 0;
+  border-radius:clamp(22px,3.4vw,34px);
+  background:var(--key);
+  overflow:hidden;
+}
+.site-footer::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(46% 70% at 8% 0%,rgba(27,166,224,0.22),transparent 62%),
+    radial-gradient(46% 70% at 92% 100%,rgba(230,20,127,0.22),transparent 62%),
+    radial-gradient(40% 60% at 55% 40%,rgba(255,194,14,0.10),transparent 65%);
+  pointer-events:none;
+}
+.footer-top{
+  position:relative;
+  display:grid;
+  grid-template-columns:1.3fr 0.9fr 1fr 1.1fr;
+  gap:clamp(28px,4vw,40px);
+  padding:clamp(44px,8vh,72px) clamp(24px,5vw,56px) clamp(28px,5vh,44px);
+}
+.footer-brand-logo{height:clamp(40px,7vw,52px);width:auto;display:block;margin-bottom:18px;filter:brightness(0) invert(1);}
+.footer-about{
+  font-size:clamp(12.5px,2.2vw,14.5px);
+  font-weight:500;
+  line-height:1.75;
+  color:rgba(255,255,255,0.6);
+  max-width:34ch;
+  margin-bottom:22px;
+}
+.footer-social{display:flex;gap:10px;}
+.footer-social a{
+  width:38px;height:38px;
+  border-radius:11px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:all .3s var(--ease);
+}
+.footer-social a svg{width:16px;height:16px;fill:rgba(255,255,255,0.7);transition:fill .3s var(--ease);}
+.footer-social a:hover{background:var(--magenta);border-color:var(--magenta);transform:translateY(-3px);}
+.footer-social a:hover svg{fill:#fff;}
+
+.footer-heading{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(11px,2vw,12.5px);
+  font-weight:700;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:#fff;
+  margin-bottom:clamp(18px,3vh,24px);
+  position:relative;
+  padding-bottom:12px;
+}
+.footer-heading::after{
+  content:'';
+  position:absolute;
+  left:0;bottom:0;
+  width:26px;height:3px;
+  border-radius:3px;
+  background:linear-gradient(90deg,var(--cyan),var(--magenta));
+}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:13px;}
+.footer-links a{
+  font-size:clamp(12.5px,2.3vw,14.5px);
+  font-weight:500;
+  color:rgba(255,255,255,0.62);
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:color .3s var(--ease),transform .3s var(--ease);
+}
+.footer-links a::before{
+  content:'';
+  width:5px;height:5px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.28);
+  flex-shrink:0;
+  transition:background .3s var(--ease);
+}
+.footer-links a:hover{color:#fff;transform:translateX(3px);}
+.footer-links a:hover::before{background:var(--yellow);}
+
+.footer-contact-list{list-style:none;display:flex;flex-direction:column;gap:16px;}
+.footer-contact-list li{display:flex;gap:12px;align-items:flex-start;}
+.footer-contact-list .fc-ico{
+  width:30px;height:30px;
+  border-radius:9px;
+  background:rgba(255,255,255,0.07);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.footer-contact-list .fc-ico svg{width:13px;height:13px;fill:rgba(255,255,255,0.75);}
+.footer-contact-list a,
+.footer-contact-list span{
+  font-size:clamp(12.5px,2.3vw,14.5px);
+  font-weight:500;
+  color:rgba(255,255,255,0.68);
+  text-decoration:none;
+  line-height:1.5;
+  transition:color .3s var(--ease);
+}
+.footer-contact-list a:hover{color:#fff;}
+
+.footer-newsletter{
+  margin-top:22px;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.footer-newsletter-label{
+  font-size:clamp(11.5px,2.1vw,13px);
+  font-weight:600;
+  color:rgba(255,255,255,0.55);
+  margin-bottom:12px;
+  line-height:1.5;
+}
+.footer-newsletter-form{display:flex;gap:8px;}
+.footer-newsletter-form input{
+  flex:1;
+  min-width:0;
+  padding:11px 14px;
+  border-radius:11px;
+  border:1px solid rgba(255,255,255,0.14);
+  background:rgba(255,255,255,0.05);
+  color:#fff;
+  font-family:'Inter',sans-serif;
+  font-size:12.5px;
+  font-weight:500;
+  outline:none;
+  transition:border-color .3s var(--ease);
+}
+.footer-newsletter-form input::placeholder{color:rgba(255,255,255,0.35);}
+.footer-newsletter-form input:focus{border-color:var(--cyan);}
+.footer-newsletter-form button{
+  flex-shrink:0;
+  width:42px;height:42px;
+  border-radius:11px;
+  border:none;
+  background:linear-gradient(135deg,var(--cyan),var(--magenta));
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:transform .3s var(--ease);
+}
+.footer-newsletter-form button:hover{transform:scale(1.06);}
+.footer-newsletter-form button svg{width:16px;height:16px;fill:#fff;}
+.footer-note{
+  font-size:11px;
+  color:rgba(255,255,255,0.32);
+  margin-top:10px;
+  line-height:1.5;
+}
+
+.footer-strip{
+  height:5px;
+  background:var(--cmyk);
+}
+.footer-bottom{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:18px;
+  flex-wrap:wrap;
+  gap:14px;
+  padding:clamp(20px,3.4vh,26px) clamp(24px,5vw,56px);
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.footer-copy{
+  font-size:clamp(11px,2vw,12.5px);
+  font-weight:500;
+  color:rgba(255,255,255,0.42);
+}
+.footer-copy strong{color:rgba(255,255,255,0.72);font-weight:700;}
+.footer-legal{
+  display:flex;
+  gap:clamp(16px,3vw,26px);
   flex-wrap:wrap;
 }
-.footer-logo{height:clamp(40px,8vw,56px);width:auto;}
-.footer-words{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(12px,2.2vw,15px);
-  font-weight:600;
-  color:var(--text-dim);
-  text-align:right;
-}
-.footer-sub{
-  font-size:clamp(10px,2vw,12px);
+.footer-legal a{
+  font-size:clamp(11px,2vw,12.5px);
   font-weight:500;
-  color:var(--text-muted);
-  margin-top:2px;
+  color:rgba(255,255,255,0.42);
+  text-decoration:none;
+  transition:color .3s var(--ease);
 }
+.footer-legal a:hover{color:#fff;}
+.footer-made{
+  font-size:11px;
+  font-weight:500;
+  color:rgba(255,255,255,0.32);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.footer-made .dot{width:5px;height:5px;border-radius:50%;background:var(--magenta);}
 
 /* ─── LANG VISIBILITY ─── */
 body.lang-am .en-text{display:none;}
@@ -718,6 +893,9 @@ body.lang-am .cta-title{letter-spacing:0;}
 }
 .reveal.in{opacity:1;transform:none;}
 
+@media(max-width:980px){
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
 @media(max-width:860px){
   .hero{grid-template-columns:1fr;}
   .hero-art{order:-1;}
@@ -729,8 +907,8 @@ body.lang-am .cta-title{letter-spacing:0;}
   .slist{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:1fr;}
   .promo-box{flex-direction:column;text-align:center;align-items:center;}
-  .footer{flex-direction:column;align-items:flex-start;}
-  .footer-words{text-align:left;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
 }
 @media(prefers-reduced-motion:reduce){
   .reveal{opacity:1;transform:none;transition:none;}
@@ -745,7 +923,7 @@ body.lang-am .cta-title{letter-spacing:0;}
 
   <!-- NAV -->
   <nav class="nav">
-    <img class="nav-logo" src="logo.png" alt="Rita Printing & Advertising">
+    <img class="nav-logo" src="logo.png" alt="Rich Printing & Advertising">
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('en')">English</button>
       <button class="lang-btn" onclick="setLang('am')">አማርኛ</button>
@@ -795,7 +973,7 @@ body.lang-am .cta-title{letter-spacing:0;}
 
     <div class="hero-art reveal">
       <div class="hero-art-card">
-        <img src="logo.png" alt="Rita logo">
+        <img src="logo.png" alt="Rich logo">
         <div class="hero-art-bar"></div>
       </div>
     </div>
@@ -948,17 +1126,105 @@ body.lang-am .cta-title{letter-spacing:0;}
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <img class="footer-logo" src="logo.png" alt="Rita logo">
-    <div>
-      <div class="footer-words en-text">Thank you for visiting</div>
-      <div class="footer-words am-text">ስለመጡ እናመሰግናለን!</div>
-      <div class="footer-sub">RITA · Printing &amp; Advertising</div>
+  <!-- FULL FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+
+      <!-- Brand column -->
+      <div class="reveal">
+        <img class="footer-brand-logo" src="logo.png" alt="Rich Printing & Advertising">
+        <p class="footer-about en-text">Rich Printing &amp; Advertising is a full-service print and design studio in Addis Ababa, turning ideas into brand-ready material — from a single business card to a complete identity.</p>
+        <p class="footer-about am-text">ሪች ማተሚያ &amp; ማስታወቂያ በአዲስ አበባ የሚገኝ ሙሉ አገልግሎት ሰጪ የህትመትና ዲዛይን ስቱዲዮ ነው — ከአንድ ቢዝነስ ካርድ እስከ ሙሉ ብራንድ ማንነት ሀሳብዎን እናደራጃለን።</p>
+        <div class="footer-social">
+          <a href="https://t.me/Rita08pp" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.02-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.02-.14-.07-.2-.09-.06-.22-.04-.31-.02-.13.02-2.28 1.45-6.44 4.27-.61.42-1.16.62-1.66.61-.55-.01-1.6-.31-2.38-.57-.96-.3-1.72-.46-1.65-.97.04-.27.49-.55 1.35-.84 5.3-2.22 8.83-3.68 10.56-4.41.5-.21.95-.32 1.34-.32.29 0 .58.04.86.13z"/></svg>
+          </a>
+          <a href="tel:+251912479132" aria-label="Phone">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          </a>
+          <a href="mailto:richasnake10@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/place/KKare+Building+%7C+Mexico+%7C+%E1%8A%AC%E1%8A%AC%E1%88%AD+%E1%88%85%E1%8A%95%E1%8D%83+%7C+%E1%88%9C%E1%8A%AD%E1%88%B2%E1%8A%AE" target="_blank" rel="noopener noreferrer" aria-label="Location">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="reveal">
+        <div class="footer-heading en-text">Explore</div>
+        <div class="footer-heading am-text">ገፆች</div>
+        <ul class="footer-links">
+          <li><a href="#services"><span class="en-text">Services</span><span class="am-text">አገልግሎቶች</span></a></li>
+          <li><a href="#services"><span class="en-text">Printing</span><span class="am-text">ህትመት</span></a></li>
+          <li><a href="#services"><span class="en-text">Design &amp; Branding</span><span class="am-text">ዲዛይን &amp; ብራንዲንግ</span></a></li>
+          <li><a href="#contact"><span class="en-text">Contact</span><span class="am-text">ያግኙን</span></a></li>
+          <li><a href="tel:+251912479132"><span class="en-text">Get a Quote</span><span class="am-text">ዋጋ ይጠይቁ</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Popular services -->
+      <div class="reveal">
+        <div class="footer-heading en-text">Popular</div>
+        <div class="footer-heading am-text">ተወዳጅ</div>
+        <ul class="footer-links">
+          <li><a href="#services"><span class="en-text">Business Cards</span><span class="am-text">ቢዝነስ ካርድ</span></a></li>
+          <li><a href="#services"><span class="en-text">Banners &amp; Stickers</span><span class="am-text">ባነር &amp; ስቲከር</span></a></li>
+          <li><a href="#services"><span class="en-text">Logo Design</span><span class="am-text">ሎጎ ዲዛይን</span></a></li>
+          <li><a href="#services"><span class="en-text">Brochures &amp; Flyers</span><span class="am-text">ብሮሸር &amp; ፍላየር</span></a></li>
+          <li><a href="#services"><span class="en-text">Certificates &amp; ID Cards</span><span class="am-text">ሰርተፍኬት &amp; መታወቂያ</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact + newsletter -->
+      <div class="reveal">
+        <div class="footer-heading en-text">Get In Touch</div>
+        <div class="footer-heading am-text">አድራሻ</div>
+        <ul class="footer-contact-list">
+          <li>
+            <span class="fc-ico"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></span>
+            <span><a href="tel:+251912479132">0912 479132</a><br><a href="tel:+251929902735">0929 902735</a></span>
+          </li>
+          <li>
+            <span class="fc-ico"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+            <a href="mailto:richasnake10@gmail.com">richasnake10@gmail.com</a>
+          </li>
+          <li>
+            <span class="fc-ico"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
+            <span class="en-text">Mexico, KKare Building<br>1st Floor · Office No. 125</span>
+            <span class="am-text">ሜክሲኮ፣ ኬኬር ህንፃ<br>1ኛ ፎቅ · ቢሮ ቁጥር 125</span>
+          </li>
+        </ul>
+
+        <div class="footer-newsletter">
+          <div class="footer-newsletter-label en-text">Get order updates &amp; offers</div>
+          <div class="footer-newsletter-label am-text">የትዕዛዝ ማሻሻያ &amp; ቅናሾችን ይቀበሉ</div>
+          <form class="footer-newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="you@email.com" aria-label="Email address">
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24"><path d="M5 12h12l-5-5 1.4-1.4L21 12l-7.6 6.4L12 17l5-5H5z"/></svg>
+            </button>
+          </form>
+          <div class="footer-note en-text">We only send updates that matter — no spam.</div>
+          <div class="footer-note am-text">አስፈላጊ መረጃ ብቻ እንልካለን — ስፓም የለም።</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-strip"></div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy en-text">&copy; <span id="year-en"></span> <strong>Rich</strong> Printing &amp; Advertising. All rights reserved.</div>
+      <div class="footer-copy am-text">&copy; <span id="year-am"></span> <strong>ሪች</strong> ማተሚያ &amp; ማስታወቂያ። ሁሉም መብቶች የተጠበቁ ናቸው።</div>
+      <div class="footer-legal">
+        <a href="#"><span class="en-text">Privacy</span><span class="am-text">ግላዊነት</span></a>
+        <a href="#"><span class="en-text">Terms</span><span class="am-text">ውሎች</span></a>
+        <a href="#contact"><span class="en-text">Support</span><span class="am-text">ድጋፍ</span></a>
+      </div>
     </div>
   </footer>
-
-  <hr class="cmyk-rule">
 
 </div>
 
@@ -983,6 +1249,12 @@ window.addEventListener('scroll',function(){
   var pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
   prog.style.width=pct+'%';
 });
+
+var yr=new Date().getFullYear();
+var yrEn=document.getElementById('year-en');
+var yrAm=document.getElementById('year-am');
+if(yrEn) yrEn.textContent=yr;
+if(yrAm) yrAm.textContent=yr;
 </script>
 </body>
 </html>
