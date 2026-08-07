@@ -386,7 +386,7 @@ button{font:inherit;}
     radial-gradient(60% 60% at 85% 30%,rgba(255,194,14,0.12),transparent 60%),
     radial-gradient(60% 60% at 60% 95%,rgba(230,20,127,0.10),transparent 60%);
 }
-.hero-art-card img{position:relative;width:80%;height:auto;}
+.hero-art-card img{position:relaie;width:100%;height:auto;}
 .hero-art-bar{
   position:absolute;
   left:0;right:0;bottom:0;
