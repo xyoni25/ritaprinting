@@ -11,6 +11,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 <body class="lang-en" data-page="services">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -57,53 +60,167 @@
       <p class="sec-sub reveal am-text">ከዕለት ተዕለት ህትመቶች እስከ ሙሉ ብራንድ ማንነት — ንግድዎ የሚፈልገው ሁሉ በአንድ ቦታ።</p>
     </div>
 
-    <!-- SERVICES -->
+    <!-- PRODUCT CATALOG -->
     <section class="section">
-      <div class="services-grid">
-        <div class="scard c-cy reveal">
-          <div class="scard-head">
-            <div class="scard-ico cy">
-              <svg viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v3h12V3z"/></svg>
-            </div>
-            <div class="scard-cat">
-              <span class="en-text">Printing</span><span class="am-text">ህትመት</span>
-              <small class="en-text">Digital &amp; Offset</small><small class="am-text">ዲጂታል &amp; ኦፍሴት</small>
-            </div>
+      <div class="sec-head reveal">
+        <span class="eyebrow en-text">Our Product Range</span>
+        <span class="eyebrow am-text">ምርቶች</span>
+        <h2 class="sec-title en-text">Browse Our <em>Products</em></h2>
+        <h2 class="sec-title am-text">ምርቶችን <em>ሙለከቱ</em></h2>
+        <p class="sec-sub en-text">Explore our wide range of high-quality products with pricing — from custom stamps to branded merchandise.</p>
+        <p class="sec-sub am-text">በዋጋ ሙሉ ምርቶችን ይመልከቱ — ከብጁ ሞህሮች እስከ ብራንድ ሸቀጦች።</p>
+      </div>
+
+      <!-- CATEGORY FILTER -->
+      <div class="category-filter reveal">
+        <button class="cat-btn active" data-category="stamp">
+          <span class="en-text">Stamp</span><span class="am-text">ሞህር</span>
+        </button>
+        <button class="cat-btn" data-category="banner">
+          <span class="en-text">Banner</span><span class="am-text">ባነር</span>
+        </button>
+        <button class="cat-btn" data-category="bcard">
+          <span class="en-text">Business Card</span><span class="am-text">ቢዝነስ ካርድ</span>
+        </button>
+        <button class="cat-btn" data-category="idcard">
+          <span class="en-text">ID Card</span><span class="am-text">መታወቂያ</span>
+        </button>
+        <button class="cat-btn" data-category="mug">
+          <span class="en-text">Mug</span><span class="am-text">ኩባያ</span>
+        </button>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="products-grid" id="productsGrid">
+        <!-- STAMP PRODUCTS -->
+        <div class="product-item reveal" data-category="stamp">
+          <div class="product-image">
+            <img src="stamp picture/Circle stamp automatic  3500.webp" alt="Circle stamp automatic">
           </div>
-          <ul class="slist">
-            <li><span class="en-text">Digital Printing</span><span class="am-text">ዲጂታል ህትመት</span></li>
-            <li><span class="en-text">Offset Printing</span><span class="am-text">ኦፍሴት ህትመት</span></li>
-            <li><span class="en-text">Receipts</span><span class="am-text">ደረሰኝ</span></li>
-            <li><span class="en-text">Stamps</span><span class="am-text">ማህተም</span></li>
-            <li><span class="en-text">Tickets</span><span class="am-text">ቲኬት</span></li>
-            <li><span class="en-text">Books</span><span class="am-text">መጽሐፍ</span></li>
-            <li><span class="en-text">Magazines</span><span class="am-text">መጽሔት</span></li>
-            <li><span class="en-text">Catalogs</span><span class="am-text">ካታሎግ</span></li>
-            <li><span class="en-text">Banners &amp; Stickers</span><span class="am-text">ባነር &amp; ስቲከር</span></li>
-          </ul>
+          <div class="product-info">
+            <h3 class="product-name en-text">Circle Stamp Automatic</h3>
+            <h3 class="product-name am-text">ክብ ሞህር ራሰ-ሠራሽ</h3>
+            <p class="product-price">Br. 3,500</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
         </div>
 
-        <div class="scard c-mg reveal">
-          <div class="scard-head">
-            <div class="scard-ico mg">
-              <svg viewBox="0 0 24 24"><path d="M20.71 5.63l-2.34-2.34a1 1 0 00-1.41 0l-2.83 2.83 3.75 3.75 2.83-2.83a1 1 0 000-1.41zM3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z"/></svg>
-            </div>
-            <div class="scard-cat">
-              <span class="en-text">Design</span><span class="am-text">ዲዛይን</span>
-              <small class="en-text">Creative &amp; Branding</small><small class="am-text">ፈጠራ &amp; ብራንዲንግ</small>
-            </div>
+        <div class="product-item reveal" data-category="stamp">
+          <div class="product-image">
+            <img src="stamp picture/name stamp automatic  2300.jpg" alt="Name stamp automatic">
           </div>
-          <ul class="slist">
-            <li><span class="en-text">Graphic Design</span><span class="am-text">ግራፊክ ዲዛይን</span></li>
-            <li><span class="en-text">Logo Design</span><span class="am-text">ሎጎ ዲዛይን</span></li>
-            <li><span class="en-text">Company Branding</span><span class="am-text">ብራንዲንግ</span></li>
-            <li><span class="en-text">Invitation Cards</span><span class="am-text">የጥሪ ካርዶች</span></li>
-            <li><span class="en-text">Brochures</span><span class="am-text">ብሮሸር</span></li>
-            <li><span class="en-text">Flyers</span><span class="am-text">ፍላየር</span></li>
-            <li><span class="en-text">Business Cards</span><span class="am-text">ቢዝነስ ካርድ</span></li>
-            <li><span class="en-text">Certificates</span><span class="am-text">ሰርተፍኬት</span></li>
-            <li><span class="en-text">ID Cards &amp; Light Boxes</span><span class="am-text">መታወቂያ &amp; ላይት ቦክስ</span></li>
-          </ul>
+          <div class="product-info">
+            <h3 class="product-name en-text">Name Stamp Automatic</h3>
+            <h3 class="product-name am-text">ስም ሞህር ራሰ-ሠራሽ</h3>
+            <p class="product-price">Br. 2,300</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-item reveal" data-category="stamp">
+          <div class="product-image">
+            <img src="stamp picture/name stamp automatic  2500.png" alt="Name stamp automatic">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name en-text">Premium Name Stamp</h3>
+            <h3 class="product-name am-text">ምርጥ ስም ሞህር</h3>
+            <p class="product-price">Br. 2,500</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-item reveal" data-category="stamp">
+          <div class="product-image">
+            <img src="stamp picture/Name stamp titer price 800.png" alt="Name stamp">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name en-text">Classic Name Stamp</h3>
+            <h3 class="product-name am-text">ታሪካዊ ስም ሞህር</h3>
+            <p class="product-price">Br. 800</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-item reveal" data-category="stamp">
+          <div class="product-image">
+            <img src="stamp picture/Trodat automatic stamp price 2500.jpg" alt="Trodat automatic stamp">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name en-text">Trodat Automatic Stamp</h3>
+            <h3 class="product-name am-text">ትሮዳት ራሰ-ሠራሽ ሞህር</h3>
+            <p class="product-price">Br. 2,500</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BANNER PRODUCTS (Placeholder) -->
+        <div class="product-item reveal" data-category="banner" style="display:none;">
+          <div class="product-image placeholder-bg">
+            <div class="placeholder-text">Banner Product Image</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name en-text">Custom Banner</h3>
+            <h3 class="product-name am-text">ብጁ ባነር</h3>
+            <p class="product-price">Br. Available upon inquiry</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BUSINESS CARD PRODUCTS (Placeholder) -->
+        <div class="product-item reveal" data-category="bcard" style="display:none;">
+          <div class="product-image placeholder-bg">
+            <div class="placeholder-text">Business Card Image</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name en-text">Premium Business Card</h3>
+            <h3 class="product-name am-text">ምርጥ ቢዝነስ ካርድ</h3>
+            <p class="product-price">Br. Available upon inquiry</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- ID CARD PRODUCTS (Placeholder) -->
+        <div class="product-item reveal" data-category="idcard" style="display:none;">
+          <div class="product-image placeholder-bg">
+            <div class="placeholder-text">ID Card Image</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name en-text">Security ID Card</h3>
+            <h3 class="product-name am-text">ደህንነት መታወቂያ</h3>
+            <p class="product-price">Br. Available upon inquiry</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- MUG PRODUCTS (Placeholder) -->
+        <div class="product-item reveal" data-category="mug" style="display:none;">
+          <div class="product-image placeholder-bg">
+            <div class="placeholder-text">Branded Mug Image</div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name en-text">Branded Mug</h3>
+            <h3 class="product-name am-text">ብራንድ ኩባያ</h3>
+            <p class="product-price">Br. Available upon inquiry</p>
+            <a href="contact.html" class="product-btn">
+              <span class="en-text">Inquire</span><span class="am-text">ይጠይቁ</span>
+            </a>
+          </div>
         </div>
       </div>
 

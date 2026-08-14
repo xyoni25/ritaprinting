@@ -116,6 +116,35 @@
     });
   }
 
+  /* ---------- product category filter ---------- */
+  function initProductFilter(){
+    var buttons = document.querySelectorAll('.cat-btn');
+    var items = document.querySelectorAll('.product-item');
+    if(!buttons.length || !items.length) return;
+
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var selectedCategory = btn.getAttribute('data-category');
+        
+        // Update active button
+        buttons.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        
+        // Filter items
+        items.forEach(function(item){
+          var itemCategory = item.getAttribute('data-category');
+          if(itemCategory === selectedCategory){
+            item.style.display = '';
+            setTimeout(function(){ item.classList.add('in'); }, 10);
+          } else {
+            item.classList.remove('in');
+            setTimeout(function(){ item.style.display = 'none'; }, 300);
+          }
+        });
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function(){
     initLang();
     initActiveNav();
@@ -124,5 +153,6 @@
     initProgress();
     initYear();
     initContactForm();
+    initProductFilter();
   });
 })();
